@@ -1,11 +1,6 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const app = express();
-const db = require("mysql");
+const dbase= require("../config/database")
 
-db.createPool({
-  username: "root",
-  host: "localhost",
-  password: "",
-  database: "reactDb",
-});
+dbase.query("insert into sale where ")

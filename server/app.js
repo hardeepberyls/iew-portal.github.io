@@ -8,6 +8,7 @@ const db = require("./config/database");
 app.use(express.static("public"));
 const routes = require("./routes/routes");
 
+
 app.use(body.urlencoded({ extended: true }));
 app.use(body.json());
 app.use("/", routes);
