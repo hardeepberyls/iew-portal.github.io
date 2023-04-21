@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0px;
+}
+.header_wrap {
+  background-color: #08297c;
+}
+.header_logo img {
+  width: 150px;
+}
+.sidebar_nav li {
+  list-style-type: none;
+  padding: 20px 0px;
+  border-top: 1px solid #c1bcbc;
+}
+.sidebar_nav li a {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+}
+.sidebar_nav {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+}
+.sidebar {
+  background-color: #08297c;
+}
+.sidebar_nav li:last-child {
+  border-bottom: 1px solid #c1bcbc;
+}
+.outer_wrap {
+  position: relative;
+  border: 1px solid #80848f;
+  border-radius: 10px;
+}
+.outer_wrap:before {
+  content: "New Sale";
+  display: inline-block;
+  position: absolute;
+  top: -12px;
+  left: 18px;
+  background-color: #08297c;
+  padding: 0px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 1;
+}
+.card_wrapper,
+.card-row,
+.submit_btns {
+  display: flex;
+}
+.card_label label {
+  font-size: 14px;
+  font-weight: 500;
+}
+.main_content {
+  position: relative;
+  padding-top: 15px;
+}
+.sub_section {
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+  margin: 25px 15px 15px;
+}
+.section_heading h2 {
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0px;
+}
+.section_heading {
+  background-color: #61dafb;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.card_input input {
+  width: 100%;
+}
+::placeholder {
+  font-size: 14px;
+}
+.card-row {
+  padding: 15px 0px;
+}
+.card_input textarea {
+  height: 60px;
+  resize: none;
+}
+.submit_btns {
+  justify-content: flex-end;
+  padding-bottom: 15px;
+}
+.sidebar_nav li.active {
+  background-color: #2418d7;
+}
+.table_data tr td input {
+  text-align: center;
+}

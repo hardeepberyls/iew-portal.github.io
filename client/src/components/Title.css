@@ -1,0 +1,4 @@
+.outer-wrap:before {
+  content: "New Sale";
+}
+

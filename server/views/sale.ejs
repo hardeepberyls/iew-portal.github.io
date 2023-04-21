@@ -1,0 +1,255 @@
+<%- include('header') %>
+<script src="js/script.js"></script>
+      <div class="row">
+        <div class="side_bar">
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="main_content">
+          <div class="block">
+            <div class="sale_wrapper">
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">Sr. No:</label>
+                </div>
+                <div class="card_input">
+                  <input type="text" placeholder="Sr. no" name="sr_input" />
+                </div>
+              </div>
+
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">Date:</label>
+                </div>
+                <div class="card_input">
+                  <input type="text" placeholder="date" />
+                </div>
+              </div>
+
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">Year</label>
+                </div>
+                <div class="card_input">
+                  <select name="year_select" id="">
+                    <option value="">Choose Year</option>
+                    <option value="">2010</option>
+                    <option value="">2011</option>
+                    <option value="">2012</option>
+                    <option value="">2013</option>
+                    <option value="">2014</option>
+                    <option value="">2015</option>
+                    <option value="">2016</option>
+                    <option value="">2017</option>
+                    <option value="">2018</option>
+                    <option value="">2019</option>
+                    <option value="">2020</option>
+                    <option value="">2021</option>
+                    <option value="">2022</option>
+                    <option value="">2023</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block inner_space">
+            <div class="sale_wrapper">
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">PO No.</label>
+                </div>
+                <div class="card_input">
+                  <input type="text" placeholder="Enter number" name="get_po" />
+                </div>
+              </div>
+
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">PO Date</label>
+                </div>
+                <div class="card_input">
+                  <input
+                    type="text"
+                    placeholder="Enter Date"
+                    name="get_po_date"
+                  />
+                </div>
+              </div>
+
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">Eway No.</label>
+                </div>
+                <div class="card_input">
+                  <input
+                    type="text"
+                    placeholder="Enter Eway No."
+                    name="get_eway"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="sale_wrapper inner_space">
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">Challan No.</label>
+                </div>
+                <div class="card_input">
+                  <input
+                    type="text"
+                    placeholder="Enter number"
+                    name="get_challan"
+                  />
+                </div>
+              </div>
+
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">Challan Date</label>
+                </div>
+                <div class="card_input">
+                  <input
+                    type="text"
+                    placeholder="Enter Date"
+                    name="get_ch_date"
+                  />
+                </div>
+              </div>
+
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">Transport</label>
+                </div>
+                <div class="card_input">
+                  <input
+                    type="text"
+                    placeholder="Enter Transport mode"
+                    name="get_transport"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <div class="sale_wrapper inner_space">
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">V Name</label>
+                </div>
+                <div class="card_input">
+                  <input
+                    type="text"
+                    placeholder="Enter name"
+                    name="get_v_name"
+                  />
+                </div>
+              </div>
+
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">V Address</label>
+                </div>
+                <div class="card_input">
+                  <textarea
+                    name="get_v_address"
+                    id=""
+                    cols="30"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">City</label>
+                </div>
+                <div class="card_input">
+                  <input type="text" placeholder="Enter city" name="get_city" />
+                </div>
+              </div>
+            </div>
+
+            <div class="sale_wrapper inner_space">
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">V State</label>
+                </div>
+                <div class="card_input">
+                  <input
+                    type="text"
+                    placeholder="Enter State"
+                    name="get_state"
+                  />
+                </div>
+              </div>
+
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">V GST</label>
+                </div>
+                <div class="card_input">
+                  <input type="text" placeholder="Enter GST" name="get_gst" />
+                </div>
+              </div>
+
+              <div class="sale_header">
+                <div class="card_wrap">
+                  <label for="">Pincode</label>
+                </div>
+                <div class="card_input">
+                  <input
+                    type="text"
+                    placeholder="Enter Pincode"
+                    name="get_pincode"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block_title" id="sale_parent">
+            <h3>Description</h3>
+            <div class="sale_wrapper" id="sale_description">
+              <div class="card_sr">
+                <input type="text" placeholder="Sr. no" />
+              </div>
+              <div class="card_item">
+                <input type="text" placeholder="Item Code" />
+              </div>
+              <div class="card_desc">
+                <input type="text" placeholder="Description" />
+              </div>
+              <div class="card_qty">
+                <input type="text" placeholder="HSN Code" />
+              </div>
+              <div class="card_qty">
+                <input type="text" placeholder="Qty" />
+              </div>
+              <div class="card_rate">
+                <input type="text" placeholder="Rate" />
+              </div>
+              <div class="card_amt">
+                <input type="text" placeholder="Amount" />
+              </div>
+            </div>
+            <div>
+              <div class="card_act">
+                <span><i class="fa-solid fa-plus" id="add_button"></i></span>
+              </div>
+            </div>
+          </div>
+          <button onclick="getData()">Click here</button>
+        </div>
+      </div>
+    </div>
+

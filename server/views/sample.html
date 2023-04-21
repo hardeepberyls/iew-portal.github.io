@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="original">Original Div</div>
+      <button id="add-button">Add Duplicate Div</button>
+    </div>
+
+    <script>
+      var parent = document.getElementById("parent");
+      var addButton = document.getElementById("add-button");
+      addButton.onclick = function () {
+        var original = document.getElementById("original");
+        var duplicate = original.cloneNode(true);
+        duplicate.id = "duplicate_" + Date.now();
+        var removeButton = document.createElement("button");
+        removeButton.innerHTML = "Remove";
+        removeButton.onclick = function () {
+          duplicate.remove();
+        };
+        duplicate.appendChild(removeButton);
+        parent.appendChild(duplicate);
+      };
+    </script>
+
+    <!-- <div id="parent">
+      <div id="original">Original Div</div>
+      <button id="add-button">Add Duplicate Div</button>
+    </div>
+
+    <script>
+      var parent = document.getElementById("parent");
+      var addButton = document.getElementById("add-button");
+      addButton.onclick = function () {
+        var original = document.getElementById("original");
+        var duplicate = original.cloneNode(true);
+        duplicate.id = "duplicate_" + Date.now();
+        var removeButton = document.createElement("button");
+        removeButton.innerHTML = "Remove";
+        removeButton.onclick = function () {
+          duplicate.remove();
+        };
+        duplicate.appendChild(removeButton);
+        parent.appendChild(duplicate);
+      };
+    </script> -->
+  </body>
+</html>
