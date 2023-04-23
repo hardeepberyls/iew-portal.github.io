@@ -3,13 +3,13 @@ const mysql = require("mysql");
 const con = mysql.createPool({
   user: "root",
   password: "",
-  database: "portaldb",
+  database: "ishwar",
   host: "localhost",
 });
-con.getConnection(function (err, result) {
-  if (err) throw err;
-  result.query("select * from sales",function(error,data) {
-    if(error) throw error;
-    console.log("table data is" ,data);
-  })
+con.getConnection(function (err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("database connected");
+  }
 });
