@@ -1,8 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidemenu";
 
+const initialState = {
+  date: "",
+  invoice_no: "",
+  eway: "",
+  transport: "",
+  po_no: "",
+  po_date: "",
+  challan_date: "",
+  challan_no: "",
+  name: "",
+  gst_no: "",
+  address: "",
+  city: "",
+  state: "",
+  pin_code: "",
+  sgst: "",
+  cgst: "",
+  igst: "",
+  total_tax: "",
+};
+
 const Sale = () => {
+  const [data, setData] = useState(initialState);
+  const [
+    date,
+    invoice_no,
+    eway,
+    transport,
+    po_no,
+    po_date,
+    challan_date,
+    challan_no,
+    name,
+    gst_no,
+    address,
+    city,
+    state,
+    pin_code,
+    sgst,
+    cgst,
+    igst,
+    total_tax,
+  ] = data;
+
+  const handleChange=(e)=>{
+    const {name,value} = e.target;
+    setData({...data, [name]: value})
+  }
+
   return (
     <>
       <div className="container-fluid">
@@ -28,6 +76,9 @@ const Sale = () => {
                         placeholder="Enter Date"
                         name="date"
                         className="form-control-sm form-control"
+                        id="date"
+                        onChange={handleChange}
+                        value={date || ""}
                       />
                     </div>
                   </div>
@@ -40,8 +91,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter Invoice"
-                        name="date"
+                        name="invoice_no"
                         className="form-control-sm form-control"
+                        id="invoice_no"
+                        value={invoice_no || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -54,8 +108,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter eway no."
-                        name="date"
+                        name="eway"
                         className="form-control-sm form-control"
+                        id="eway"
+                        value={eway || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -68,8 +125,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter Transport mode"
-                        name="date"
+                        name="transport"
                         className="form-control-sm form-control"
+                        id="transport"
+                        value={transport || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -84,8 +144,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter PO number"
-                        name="date"
+                        name="po_no"
                         className="form-control-sm form-control"
+                        id="po_no"
+                        value={po_no || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -98,8 +161,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter PO date"
-                        name="date"
+                        name="po_date"
                         className="form-control-sm form-control"
+                        id="po_date"
+                        value={po_date || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -112,8 +178,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter Challan no"
-                        name="date"
+                        name="challan_no"
                         className="form-control-sm form-control"
+                        id="challan_no"
+                        value={challan_no || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -126,8 +195,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter Challan date"
-                        name="date"
+                        name="challan_date"
                         className="form-control-sm form-control"
+                        id="challan_date"
+                        value={challan_date || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -141,14 +213,17 @@ const Sale = () => {
                 <div className="card-row">
                   <div className="col-lg-3 card_wrapper">
                     <div className="col-lg-4 card_label">
-                      <label htmlFor="">Name :</label>
+                      <label htmlFor="name">Name :</label>
                     </div>
                     <div className="col-lg-6 card_input">
                       <input
                         type="text"
                         placeholder="Enter Name"
-                        name="date"
+                        name="name"
                         className="form-control-sm form-control"
+                        id="name"
+                        value={name || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -161,8 +236,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter GST no"
-                        name="date"
+                        name="gst_no"
                         className="form-control-sm form-control"
+                        id="gst_no"
+                        value={gst_no || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -174,11 +252,13 @@ const Sale = () => {
                     <div className="col-lg-6 card_input">
                       <textarea
                         className="form-control form-control-sm"
-                        name=""
-                        id=""
+                        name="address"
+                        id="address"
                         cols="5"
                         rows="5"
                         placeholder="Enter Address"
+                        value={address || ""}
+                        onChange={handleChange}
                       ></textarea>
                     </div>
                   </div>
@@ -193,8 +273,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter City"
-                        name="date"
+                        name="city"
                         className="form-control-sm form-control"
+                        id="city"
+                        value={city || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -207,8 +290,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter State"
-                        name="date"
+                        name="state"
                         className="form-control-sm form-control"
+                        id="state"
+                        value={state || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
@@ -221,8 +307,11 @@ const Sale = () => {
                       <input
                         type="text"
                         placeholder="Enter Pin Code"
-                        name="date"
+                        name="pin_code"
                         className="form-control-sm form-control"
+                        id="pin_code"
+                        value={pin_code || ""}
+                        onChange={handleChange}
                       />
                     </div>
                   </div>
