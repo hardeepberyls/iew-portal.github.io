@@ -12,58 +12,43 @@ const Sidemenu = () => {
       <div className="col-lg-2 sidebar px-0">
         <nav className="navbar-nav">
           <ul className="sidebar_nav">
-            <li className={activeClass === "dashboard" ? "active" : ""}>
-              <NavLink to="/" onClick={() => handleItemClick("dashboard")}>
+            <li className="nav-item">
+              <NavLink to="/" className="nav-link">
                 Dashboard
               </NavLink>
             </li>
-            <li className={activeClass === "invoice" ? "active" : ""}>
+            <li className="nav-item">
               <NavLink
                 to="/invoice"
-                onClick={() => {
-                  handleItemClick("invoice");
-                }}
+                className="nav-link"
               >
                 All Invoices
               </NavLink>
             </li>
             <li
-              className={activeClass === "sale" ? "active" : ""}
-              onClick={() => handleItemClick("sale")}
+              className="nav-item"
             >
-              <NavLink to="/sale">New Sales</NavLink>
+              <NavLink to="/sale" className="nav-link">New Sales</NavLink>
             </li>
             <li
-              className={activeClass === "quotation" ? "active" : ""}
-              onClick={() => {
-                handleItemClick("quotation");
-              }}
+              className="nav-item"
             >
-              <NavLink to="/quotation">New Quotation</NavLink>
+              <NavLink to="/quotation" className="nav-link">New Quotation</NavLink>
             </li>
             <li
-              className={activeClass === "purchase" ? "active" : ""}
-              onClick={() => {
-                handleItemClick("purchase");
-              }}
+              className="nav-item"
             >
-              <NavLink to="/purchase">New Purchase</NavLink>
+              <NavLink to="/purchase" className="nav-link">New Purchase</NavLink>
             </li>
             <li
-              className={activeClass === "pi" ? "active" : ""}
-              onClick={() => {
-                handleItemClick("pi");
-              }}
+              className="nav-item"
             >
-              <NavLink to="/pi">Performa Invoice</NavLink>
+              <NavLink to="/pi" className="nav-link">Performa Invoice</NavLink>
             </li>
             <li
-              className={activeClass === "eway" ? "active" : ""}
-              onClick={() => {
-                handleItemClick("eway");
-              }}
+              className="nav-item"
             >
-              <NavLink to="/eway">E-Way</NavLink>
+              <NavLink to="/eway" className="nav-link">E-Way</NavLink>
             </li>
           </ul>
         </nav>
